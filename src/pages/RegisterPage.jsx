@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
@@ -11,7 +11,7 @@ export const RegisterPage = () => {
     ev.preventDefault();
 
     try{
-        await axios.post('http://localhost:5000/register',{
+        await axios.post('http://localhost:4000/register',{
             name,
             email,
             password,
@@ -25,7 +25,7 @@ export const RegisterPage = () => {
 
     
      
-  };
+  }
 
   return (
     <div className='mt-4 grow  flex items-center justify-around'>
