@@ -14,7 +14,7 @@ export default function PhotosUploader({addedPhotos, onChange}) {
       setPhotoLink('');
     } catch (error) {
       console.error('Error uploading photo by link:', error);
-      // Add error handling/user notification here
+      
     }
   }
 
@@ -32,7 +32,7 @@ export default function PhotosUploader({addedPhotos, onChange}) {
       onChange(prev => [...prev, ...filenames]);
     } catch (error) {
       console.error('Error uploading photos:', error);
-      // Add error handling/user notification here
+      
     }
   }
 

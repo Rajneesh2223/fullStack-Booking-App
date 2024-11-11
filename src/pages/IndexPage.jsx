@@ -11,7 +11,7 @@ export const IndexPage = () => {
     const fetchPlaces = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:4000/places', {
+        const response = await fetch('https://fullstack-bookingapp.onrender.com/places', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ export const IndexPage = () => {
             {place.photos?.[0] ? (
               <img 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                src={'http://localhost:4000/uploads/' + place.photos[0]} 
+                src={'https://fullstack-bookingapp.onrender.com/uploads/' + place.photos[0]} 
                 alt={place.title}
                 onError={(e) => {
                   e.target.src = "/api/placeholder/400/300";

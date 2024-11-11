@@ -13,7 +13,7 @@ export const PlacesPage = () => {
 
   async function loadPlaces() {
     try {
-      const { data } = await axios.get('/user-places');
+      const { data } = await axios.get('/places');
       setPlaces(data);
       setLoading(false);
     } catch (error) {
@@ -55,11 +55,11 @@ export const PlacesPage = () => {
               >
                 <div className="relative aspect-video">
                   {place.photos?.[0] && (
-                    <img
-                      src={`http://localhost:4000/uploads/${place.photos[0]}`}
-                      alt={place.title}
-                      className="object-cover w-full h-full"
-                    />
+                   <img
+                   src={`https://fullstack-bookingapp.onrender.com/uploads/${place.photos[0]}`}
+                   alt={place.title}
+                   className="object-cover w-full h-full"
+                 />
                   )}
                   <div className="absolute top-2 right-2">
                     <button className="p-2 bg-white rounded-full shadow-md hover:bg-gray-100">

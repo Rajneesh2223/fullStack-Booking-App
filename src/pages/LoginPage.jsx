@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../UserContext.jsx';
@@ -17,7 +17,7 @@ export const LoginPage = () => {
       const {data}=await axios.post('/login', { email, password });
       setUser(data);
       alert('Login successful');
-      setRedirect(true); // Corrected to set redirect to true
+      setRedirect(true); 
     } catch (error) {
       alert('Login failed');
     }
@@ -48,7 +48,7 @@ export const LoginPage = () => {
             Login
           </button>
           <div className="text-center py-2 text-gray-500">
-            Don't have an account yet? <Link className="underline text-black" to={'/register'}>Register now</Link>
+            Dont have an account yet? <Link className="underline text-black" to={'/register'}>Register now</Link>
           </div>
         </form>
       </div>
